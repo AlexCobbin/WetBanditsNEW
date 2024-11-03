@@ -208,11 +208,11 @@ public class Inventory : MonoBehaviour
     }
     public void CraftingRope()
     {
-        if (Leaf >= 3 && Moss >= 1)
+        if (Leaf >= 4 && Moss >= 3)
         {
-            Leaf = Leaf - 3;
+            Leaf = Leaf - 4;
             LeafCount();
-            Moss--;
+            Moss = Moss - 3;
             MossCount();
             Rope++;
             RopeCount();
@@ -225,9 +225,9 @@ public class Inventory : MonoBehaviour
     }
     public void CraftingSharpenedRock()
     {
-        if (Rock >= 2)
+        if (Rock >= 5)
         {
-            Rock = Rock - 2;
+            Rock = Rock - 5;
             RockCount();
             SharpenedRock++;
             SharpenedRockCount();
@@ -240,13 +240,13 @@ public class Inventory : MonoBehaviour
     }
     public void CraftingAxe()
     {
-        if (SharpenedRock >= 1 && Rope >= 1 && Stick >= 1)
+        if (SharpenedRock >= 1 && Rope >= 1 && Stick >= 4)
         {
             SharpenedRock--;
             SharpenedRockCount();
             Rope--;
             RopeCount();
-            Stick--;
+            Stick = Stick - 4;
             StickCount();
             Axe++;
             AxeCount();
