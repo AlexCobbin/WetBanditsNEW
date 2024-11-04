@@ -30,8 +30,7 @@ public class Goober : MonoBehaviour
     public GameObject ChaseMusic;
     public GameObject Ambience;
     public GameObject Release;
-    public Animator goobAnim;
-    private Vector2 moveInput;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -143,9 +142,6 @@ public class Goober : MonoBehaviour
             Ambience.SetActive(true);
         }
 
-        goobAnim.SetFloat("x", this.transform.right.normalized.x);
-        goobAnim.SetFloat("y", this.transform.forward.normalized.z);
-
     }
 
     private IEnumerator waitForGoobMove()
@@ -158,7 +154,7 @@ public class Goober : MonoBehaviour
     {
         speed = 0f;
         yield return new WaitForSeconds(1);
-        speed = 3.1f;
+        speed = 3.2f;
         
     }
     private void OnTriggerEnter(Collider other)

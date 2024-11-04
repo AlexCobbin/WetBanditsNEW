@@ -59,7 +59,7 @@ public class Bridge : MonoBehaviour
         }
         else if (other.gameObject.tag == "Player" && !Input.GetKey(KeyCode.E))
         {
-            Text.text = "If I could repair this bridge, I can escape.\n15 Sticks and 4 Ropes should do it";
+            Text.text = "If I repair this bridge, I can escape.\n15 Sticks and 4 Ropes should do it";
         }
     }
     private void OnTriggerExit(Collider other)

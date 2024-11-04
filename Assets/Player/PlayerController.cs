@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     #region Player Components
     public Rigidbody rb;
     public Animator anim;
+    public Animator ganim;
     public Animator flip;
     public SpriteRenderer sr;
     public GameObject footsteps;
@@ -91,7 +92,8 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("moveSpeed", rb.velocity.magnitude);
         anim.SetFloat("x", moveInput.x);
         anim.SetFloat("y", moveInput.y);
-       
+        ganim.SetFloat("Xg", moveInput.x);
+        ganim.SetFloat("Yg", moveInput.y);
     }
 
     void FixedUpdate()
