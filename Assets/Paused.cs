@@ -18,17 +18,20 @@ public class Paused : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && isPaused == false) 
+        if (Input.GetButtonDown("Cancel"))
         {
-            pauseMenu.SetActive(true);
-            Time.timeScale = 0f;
-            isPaused = true;
-        }
-        if (Input.GetKey(KeyCode.Escape) && isPaused == true)
-        {
-            pauseMenu.SetActive(false);
-            Time.timeScale = 1.0f;
-            isPaused = false;
+            if (isPaused == false)
+            {
+                pauseMenu.SetActive(true);
+                Time.timeScale = 0f;
+                isPaused = true;
+            }
+            else
+            {
+                pauseMenu.SetActive(false);
+                Time.timeScale = 1.0f;
+                isPaused = false;
+            }
         }
     }
 
