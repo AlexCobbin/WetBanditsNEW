@@ -30,6 +30,7 @@ public class Goober : MonoBehaviour
     public GameObject ChaseMusic;
     public GameObject Ambience;
     public GameObject Release;
+    public GameObject KillMode;
 
 
     // Start is called before the first frame update
@@ -67,6 +68,7 @@ public class Goober : MonoBehaviour
         #region goober loses the player
         if (discovered && GoobLocat != locat && goobOnTheMove == false && !goobAdj(adj))
         {
+            KillMode.SetActive(false);
             discovered = false;
             Audable.Pause();
             Audable.enabled = false;
@@ -156,6 +158,7 @@ public class Goober : MonoBehaviour
         speed = 0f;
         yield return new WaitForSeconds(1);
         speed = 3.2f;
+        KillMode.SetActive(true);
         
     }
     private void OnTriggerEnter(Collider other)
@@ -250,9 +253,9 @@ public class Goober : MonoBehaviour
             default:
                 break;
         }
-        if(GoobWanderLocat > 15)
+        if(GoobWanderLocat == GoobLocat)
         {
-            GoobWanderLocat = GoobLocat;
+            gooberWanderSelection();
         }
     }
 
