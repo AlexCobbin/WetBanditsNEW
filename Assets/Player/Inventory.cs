@@ -47,10 +47,10 @@ public class Inventory : MonoBehaviour
     private string type;
     private int Leaf = 0;
     private int Rock = 0;
-    private int Stick = 0;
+    public int Stick = 0;
     private int Moss = 0;
     public int Torch = 0;
-    private int Rope = 0;
+    public int Rope = 0;
     private int SharpenedRock = 0;
     public int Axe = 0;
     #endregion
@@ -208,9 +208,9 @@ public class Inventory : MonoBehaviour
     }
     public void CraftingRope()
     {
-        if (Leaf >= 4 && Moss >= 3)
+        if (Leaf >= 2 && Moss >= 3)
         {
-            Leaf = Leaf - 4;
+            Leaf = Leaf - 2;
             LeafCount();
             Moss = Moss - 3;
             MossCount();
@@ -225,9 +225,9 @@ public class Inventory : MonoBehaviour
     }
     public void CraftingSharpenedRock()
     {
-        if (Rock >= 5)
+        if (Rock >= 3)
         {
-            Rock = Rock - 5;
+            Rock = Rock - 3;
             RockCount();
             SharpenedRock++;
             SharpenedRockCount();
@@ -240,13 +240,13 @@ public class Inventory : MonoBehaviour
     }
     public void CraftingAxe()
     {
-        if (SharpenedRock >= 1 && Rope >= 1 && Stick >= 4)
+        if (SharpenedRock >= 1 && Rope >= 1 && Stick >= 2)
         {
             SharpenedRock--;
             SharpenedRockCount();
             Rope--;
             RopeCount();
-            Stick = Stick - 4;
+            Stick = Stick - 2;
             StickCount();
             Axe++;
             AxeCount();
