@@ -157,7 +157,7 @@ public class Goober : MonoBehaviour
     {
         speed = 0f;
         yield return new WaitForSeconds(1);
-        speed = 3.2f;
+        speed = 4.5f;
         KillMode.SetActive(true);
         
     }

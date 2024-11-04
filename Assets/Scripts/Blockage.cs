@@ -26,6 +26,7 @@ public class Blockage : MonoBehaviour
             {
                 Destroy(blockage);
                 Inv.Axe--;
+                Inv.AxeCount();
                 AudioSource.Play();
 
             }

@@ -194,7 +194,7 @@ public class Inventory : MonoBehaviour
             StickCount();
             Moss--;
             MossCount();
-            Torch = Torch + 20;
+            Torch = Torch + 60;
             TorchCount();
             PhysicalTorch.gameObject.SetActive(true);
             StartCoroutine(torchDeminish());
@@ -208,11 +208,11 @@ public class Inventory : MonoBehaviour
     }
     public void CraftingRope()
     {
-        if (Leaf >= 2 && Moss >= 3)
+        if (Leaf >= 3 && Moss >= 2)
         {
-            Leaf = Leaf - 2;
+            Leaf = Leaf - 3;
             LeafCount();
-            Moss = Moss - 3;
+            Moss = Moss - 2;
             MossCount();
             Rope++;
             RopeCount();
