@@ -7096,6 +7096,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1705674662}
     m_Modifications:
+    - target: {fileID: 653555738, guid: 1b5053de5fefb41428a4c93d90599d9a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 653555739, guid: 1b5053de5fefb41428a4c93d90599d9a, type: 3}
+      propertyPath: m_SpotAngle
+      value: 67.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8178112286864821920, guid: 1b5053de5fefb41428a4c93d90599d9a, type: 3}
       propertyPath: leGame
       value: 
@@ -24187,6 +24195,14 @@ PrefabInstance:
       propertyPath: tileCollectables.Array.data[15]
       value: 
       objectReference: {fileID: 363105023}
+    - target: {fileID: 6303967375357121819, guid: 76b4f4ef788797c42afa6770f7803637, type: 3}
+      propertyPath: m_Radius
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6303967375357121819, guid: 76b4f4ef788797c42afa6770f7803637, type: 3}
+      propertyPath: m_Direction
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6303967376873460952, guid: 76b4f4ef788797c42afa6770f7803637, type: 3}
       propertyPath: m_Layer
       value: 3
